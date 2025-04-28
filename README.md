@@ -30,3 +30,9 @@ A Postman collection is included to easily test the available API endpoints.
 - Use it to verify backend connections and ensure the services are running properly.
 
 > 💡 **Tip:** Change the URL in the service before testing with the App and testing with Postman.
+
+---
+
+## 🔗 Lambda code
+
+The `lambda_nodejs.js` file contains the code to be executed in AWS Lambda.
