@@ -33,6 +33,7 @@ A Postman collection is included to easily test the available API endpoints.
 
 ---
 
-## 🔗 Lambda code
+## 🖥️ Lambda Code 
 
-The `lambda_nodejs.js` file contains the code to be executed in AWS Lambda.
+The `lambda_nodejs.js` file includes the necessary code to be deployed and executed within AWS Lambda.
+
