@@ -1,0 +1,16 @@
+<div class="character-card">
+  <img
+    [src]="character.image"
+    alt="{{ character.name }}"
+    class="character-image"
+  />
+  <h2>{{ character.name }}</h2>
+  <p><strong>Power Level:</strong> {{ character.ki }}</p>
+  <p><strong>Affiliation:</strong> {{ character.affiliation }}</p>
+  <button class="deleteButton" (click)="onDeleteCharacter(character.id)">
+    Delete
+  </button>
+  <button class="editButton" (click)="onEditCharacter(character.id)">
+    Edit
+  </button>
+</div>

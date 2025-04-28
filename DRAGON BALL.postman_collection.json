@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "47367974-1991-4cb7-8814-6e2b83f239cd",
+		"name": "DRAGON BALL",
+		"description": "API del proyecto implementado en AWS Serverless para GFT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27906889",
+		"_collection_link": "https://bold-meteor-267891.postman.co/workspace/BNC~0c216c86-2616-4547-b022-f44a128a23ac/collection/27906889-47367974-1991-4cb7-8814-6e2b83f239cd?action=share&source=collection_link&creator=27906889"
+	},
+	"item": [
+		{
+			"name": "CREATE CHARACTER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Goku\",\r\n    \"ki\": \"60.000.000\",\r\n    \"race\": \"Saiyan\",\r\n    \"image\": \"https://dragonball-api.com/characters/goku_normal.webp\",\r\n    \"affiliation\": \"Z Fighter\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wu9qxj7k68.execute-api.us-east-1.amazonaws.com/createCharacter",
+					"protocol": "https",
+					"host": [
+						"wu9qxj7k68",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"createCharacter"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE CHARACTER",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"name\": \"Vegeta\",\r\n    \"race\": \"Saiyan\",\r\n    \"powerLevel\": 8500,\r\n    \"isVillain\": false\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://wu9qxj7k68.execute-api.us-east-1.amazonaws.com/updateCharacter?id=4dc0aef2-6d6e-428e-b7df-b9dee56a19e5",
+					"protocol": "https",
+					"host": [
+						"wu9qxj7k68",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"updateCharacter"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4dc0aef2-6d6e-428e-b7df-b9dee56a19e5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://wu9qxj7k68.execute-api.us-east-1.amazonaws.com/getCharacter?id=9f9e6a5b-6468-43c1-b9b5-7b8090be6250",
+					"protocol": "https",
+					"host": [
+						"wu9qxj7k68",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"getCharacter"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9f9e6a5b-6468-43c1-b9b5-7b8090be6250"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://api.amazonaws.com/dragonball \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n        \"name\": \"Goku\",\r\n        \"race\": \"Saiyan\",\r\n        \"powerLevel\": 9001,\r\n        \"isVillain\": false\r\n      }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE BY ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://wu9qxj7k68.execute-api.us-east-1.amazonaws.com/removeCharacter?id=9a8327e9-6346-4a95-a889-6ef7b48ecc52",
+					"protocol": "https",
+					"host": [
+						"wu9qxj7k68",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"removeCharacter"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9a8327e9-6346-4a95-a889-6ef7b48ecc52"
+						}
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://api.amazonaws.com/dragonball \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n        \"name\": \"Goku\",\r\n        \"race\": \"Saiyan\",\r\n        \"powerLevel\": 9001,\r\n        \"isVillain\": false\r\n      }'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://wu9qxj7k68.execute-api.us-east-1.amazonaws.com/getCharacters",
+					"protocol": "https",
+					"host": [
+						"wu9qxj7k68",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"getCharacters"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST https://api.amazonaws.com/dragonball \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\r\n        \"name\": \"Goku\",\r\n        \"race\": \"Saiyan\",\r\n        \"powerLevel\": 9001,\r\n        \"isVillain\": false\r\n      }'\r\n"
+			},
+			"response": []
+		}
+	]
+}

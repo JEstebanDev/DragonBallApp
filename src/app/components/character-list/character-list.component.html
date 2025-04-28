@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Character List</h2>
+  <div class="character-list">
+    <app-character-card
+      *ngFor="let character of characters"
+      [character]="character"
+      (deleteCharacter)="onDeleteCharacter(character.id)"
+      (editCharacter)="onEditCharacter(character.id)"
+    ></app-character-card>
+  </div>
+
+  <div *ngIf="characters.length === 0">
+    <p>No characters found. Please create a character.</p>
+  </div>
+</div>
